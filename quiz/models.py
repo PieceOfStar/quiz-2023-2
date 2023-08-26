@@ -15,7 +15,7 @@ class Participant(models.Model):
     name = models.CharField(verbose_name = '이름', max_length = 10, null = False)
     student_id = models.CharField(verbose_name = '학번', max_length = 10, null = False)
     phone_num = models.CharField(verbose_name = '전화번호', max_length = 13, null = False)
-    score = models.IntegerField(verbose_name = '점수')
+    score = models.IntegerField(verbose_name = '점수', default = 0)
     
 class QuizSimple(models.Model):
     quiz_num = models.IntegerField(verbose_name = '퀴즈 번호')

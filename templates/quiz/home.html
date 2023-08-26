@@ -1,1 +1,6 @@
+{% load static %}
 홈
+<hr>
+<img class="header-img" src="{% static 'image/lion.jpeg' %}">
+<hr>
+<button onclick="location.href='{% url 'quiz:form' %}'">상품 지급 정보 확인</button>

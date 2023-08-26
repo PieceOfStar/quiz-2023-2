@@ -1,1 +1,8 @@
-폼
+<form method="post">
+    {% for field in form %}
+        <div class="custom-field">
+            {{ field }}
+        </div>
+    {% endfor %}
+    <button type="submit">퀴즈 풀기 Go!</button>
+</form>
