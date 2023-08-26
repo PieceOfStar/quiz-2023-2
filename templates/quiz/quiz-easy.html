@@ -6,7 +6,7 @@ easy
 <div class="quiz__q">Q. {{ item.question }}</div>
 <div class="quiz__c" id="choice1">
     {% if next_num is not None %}
-        <a href="{% url 'quiz:easy' num=next_num %}">
+        <a href="{% url 'quiz:easy' num=next_num user_answer=item.choices1 %}">
             {{ item.choices1 }}
         </a>
     {% else %}
@@ -17,7 +17,7 @@ easy
 </div>
 <div class="quiz__c" id="choice2">
     {% if next_num is not None %}
-        <a href="{% url 'quiz:easy' num=next_num %}">
+        <a href="{% url 'quiz:easy' num=next_num user_answer=item.choices2 %}">
             {{ item.choices2 }}
         </a>
     {% else %}

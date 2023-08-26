@@ -10,7 +10,7 @@ normal
             {{ item.choices1 }}
         </a>
     {% else %}
-        <a href="{% url 'quiz:easy' num=7 %}">
+        <a href="{% url 'quiz:easy' num=7 user_answer='start' %}">
             {{ item.choices1 }}
         </a>
     {% endif %}
@@ -21,7 +21,7 @@ normal
             {{ item.choices2 }}
         </a>
     {% else %}
-        <a href="{% url 'quiz:easy' num=7 %}">
+        <a href="{% url 'quiz:easy' num=7 user_answer='start'%}">
             {{ item.choices2 }}
         </a>
     {% endif %}
@@ -32,7 +32,7 @@ normal
             {{ item.choices3 }}
         </a>
     {% else %}
-        <a href="{% url 'quiz:easy' num=7 %}">
+        <a href="{% url 'quiz:easy' num=7 user_answer='start'%}">
             {{ item.choices3 }}
         </a>
     {% endif %}

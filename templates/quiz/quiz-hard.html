@@ -1,4 +1,21 @@
 hard
 <hr>
 
-{{ quiz_num }}
+<div class="quiz__n">#{{ num }}번</div>
+
+{% if num == 9 %}
+{% comment %} 넘길 때 10 넘기기 {% endcomment %}
+    <div>Q. {{ item.question }}</div>
+    <form method="post" action="{% url 'quiz:hard' num=9%}">
+        {% csrf_token %}
+        <input type="text" name="user_answer" placeholder="OO이론">
+        <button type="submit">다음</button>
+    </form>
+{% else %}
+    <form method="post" action="{% url 'quiz:hard' num=10%}">
+        {% csrf_token %}
+        <input type="text" name="user_answer" placeholder="ex. 123">
+        <button type="submit">다음</button>
+    </form>
+{% endif %}
+{% comment %} 넘길 때 result 넘기기 {% endcomment %}
