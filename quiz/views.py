@@ -16,7 +16,7 @@ def form_view(request):
         form = ParticipantForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('quiz:normal', num = 0)
+            return redirect('quiz:normal', num = 1, user_answer = None)
     
     return render(request, 'quiz/form.html') # 등록에 실패한다면 다시 폼 보여주기
 
@@ -36,16 +36,26 @@ def easy_quiz_view(request, num):
     else:
         return redirect('quiz:hard', num = 9)
 
-def normal_quiz_view(request, num):
+def normal_quiz_view(request, num, user_answer = None):
     
+    print(user_answer)
+    print(request)
     next_num = num + 1
     
     if (num >= 1 and num <= 6): # 1~6이면 quiz-normal.html
         
         item = QuizNormal.objects.get(quiz_num = num)
+        
+        if(num >= 2):
+            previous_item = QuizNormal.objects.get(quiz_num = num-1)
+            print(previous_item.answer)
+            if(user_answer == str(previous_item.answer)):
+                print("정답")
+                item.sum_score += 10
+        
         context = { 
             'item' : item,
-            'next_num' : next_num, 
+            'next_num' : next_num,
         }
         return render(request, 'quiz/quiz-normal.html', context)
     
