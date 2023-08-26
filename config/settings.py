@@ -122,7 +122,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 개발자가 추가하는 부분 (ex. css파일, js파일 등)
 STATIC_URL = 'static/'
-
+STATICFILES_DIRS = [ 
+    BASE_DIR / 'static' 
+]
 
 # 사용자가 추가하는 부분 (ex. 프로필 사진, 게시글 사진 등)
 MEDIA_URL = '/media/'
