@@ -1,0 +1,28 @@
+easy
+<hr>
+
+<div class="quiz__n">#{{ item.quiz_num }}번</div>
+
+<div class="quiz__q">Q. {{ item.question }}</div>
+<div class="quiz__c" id="choice1">
+    {% if next_num is not None %}
+        <a href="{% url 'quiz:easy' num=next_num %}">
+            {{ item.choices1 }}
+        </a>
+    {% else %}
+        <a href="{% url 'quiz:hard' num=9 %}">
+            {{ item.choices1 }}
+        </a>
+    {% endif %}
+</div>
+<div class="quiz__c" id="choice2">
+    {% if next_num is not None %}
+        <a href="{% url 'quiz:easy' num=next_num %}">
+            {{ item.choices2 }}
+        </a>
+    {% else %}
+        <a href="{% url 'quiz:hard' num=9 %}">
+            {{ item.choices2 }}
+        </a>
+    {% endif %}
+</div>

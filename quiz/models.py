@@ -1,33 +1,43 @@
 from django.db import models
 
-SIMPLE_CATEGORY = (
-    ('객관식', '객관식'),
-    ('OX', 'OX'),
-    ('주관식', '주관식'),
+CATEGORY = (
+    ('easy', 'easy'),
+    ('normal', 'normal'),
+    ('hard', 'hard'),
 )
 
-ANSWER_CHOICES = (
-    ('선택지1', '선택지1'),
-    ('선택지2', '선택지2'),
-    ('선택지3', '선택지3'),
-)
 class Participant(models.Model):
     name = models.CharField(verbose_name = '이름', max_length = 10, null = False)
     student_id = models.CharField(verbose_name = '학번', max_length = 10, null = False)
     phone_num = models.CharField(verbose_name = '전화번호', max_length = 13, null = False)
     score = models.IntegerField(verbose_name = '점수', default = 0)
     
-class QuizSimple(models.Model):
+class QuizEasy(models.Model):
     quiz_num = models.IntegerField(verbose_name = '퀴즈 번호')
-    category = models.CharField(verbose_name = '카테고리', max_length = 10, choices = SIMPLE_CATEGORY, default = '객관식')
-    question = models.CharField(verbose_name = '퀴즈', max_length = 250)
-    answer_choices = models.CharField(verbose_name = '선택지', max_length = 100, choices = ANSWER_CHOICES, default = 'nothing')
-    is_showed = models.BooleanField(verbose_name = '사용자에게 보여줬는지', default = False)
+    category = models.CharField(verbose_name = '카테고리', max_length = 10, choices = CATEGORY, default = 'easy')
+    question = models.CharField(verbose_name = '내용', max_length = 250)
+    choices1 = models.CharField(verbose_name = '선택지1', max_length = 100, default = 'O')
+    choices2 = models.CharField(verbose_name = '선택지2', max_length = 100, default = 'X')
+    answer = models.CharField(verbose_name = '정답', max_length = 100)
     sum_score = models.IntegerField(verbose_name = '사용자 누적 점수', default = 0)
     
-class QuizInput(models.Model):
+class QuizNormal(models.Model):
     quiz_num = models.IntegerField(verbose_name = '퀴즈 번호')
-    category = models.CharField(verbose_name = '카테고리', max_length = 10, choices = SIMPLE_CATEGORY, default = '주관식')
-    answer = models.CharField(verbose_name = '정답', max_length = 10)
-    is_showed = models.BooleanField(verbose_name = '사용자에게 보여줬는지', default = False)
+    category = models.CharField(verbose_name = '카테고리', max_length = 10, choices = CATEGORY, default = 'normal')
+    question = models.CharField(verbose_name = '내용', max_length = 250)
+    choices1 = models.CharField(verbose_name = '선택지1', max_length = 100)
+    choices2 = models.CharField(verbose_name = '선택지2', max_length = 100)
+    choices3 = models.CharField(verbose_name = '선택지3', max_length = 100)
+    answer = models.CharField(verbose_name = '정답', max_length = 100)
+    sum_score = models.IntegerField(verbose_name = '사용자 누적 점수', default = 0)
+    
+class QuizHard(models.Model):
+    quiz_num = models.IntegerField(verbose_name = '퀴즈 번호')
+    category = models.CharField(verbose_name = '카테고리', max_length = 10, choices = CATEGORY, default = 'hard')
+    question = models.CharField(verbose_name = '내용', max_length = 250)
+    answer9_1 = models.CharField(verbose_name = '9변_1 정답', max_length = 10, default = '빅뱅')
+    answer9_2 = models.CharField(verbose_name = '9번_2 정답', max_length = 10, default = '빅뱅이론')
+    answer9_3 = models.CharField(verbose_name = '9번_3 정답', max_length = 10, default = '빅뱅 이론')
+    answer10_1 = models.CharField(verbose_name = '10번_1 정답', max_length = 10, default = '405')
+    answer10_2 = models.CharField(verbose_name = '10번_2 정답', max_length = 10, default = '405호')
     sum_score = models.IntegerField(verbose_name = '사용자 누적 점수', default = 0)

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ParticipantForm
+from .models import QuizEasy, QuizNormal, QuizHard
 
 def home_view(request):
     return render(request, 'quiz/home.html')
@@ -15,13 +16,46 @@ def form_view(request):
         form = ParticipantForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('quiz:home')  # 회원가입 성공 시 이동할 페이지
+            return redirect('quiz:normal', num = 0)
     
-    return render(request, 'participant_signup.html', {'form': form})
-    return render(request, 'quiz/form.html')
+    return render(request, 'quiz/form.html') # 등록에 실패한다면 다시 폼 보여주기
 
-def quiz_view(request):
-    return render(request, 'quiz/quiz.html')
+def easy_quiz_view(request, num):
+    
+    next_num = num + 1
+    
+    if (num == 7 or num <= 8): # 7 혹은 8이면 quiz-easy.html
+        
+        item = QuizEasy.objects.get(quiz_num = num)
+        context = { 
+            'item' : item,
+            'next_num' : next_num, 
+        }
+        return render(request, 'quiz/quiz-easy.html', context)
+    
+    else:
+        return redirect('quiz:hard', num = 9)
+
+def normal_quiz_view(request, num):
+    
+    next_num = num + 1
+    
+    if (num >= 1 and num <= 6): # 1~6이면 quiz-normal.html
+        
+        item = QuizNormal.objects.get(quiz_num = num)
+        context = { 
+            'item' : item,
+            'next_num' : next_num, 
+        }
+        return render(request, 'quiz/quiz-normal.html', context)
+    
+    else:
+        return redirect('quiz:easy', num = 7)
+    
+
+def hard_quiz_view(request, num):
+    # form 보여주기
+    pass
 
 def result_view(request):
     return render(request, 'quiz/result.html')
