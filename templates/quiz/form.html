@@ -1,4 +1,73 @@
-<form method="post">
+{% extends 'base.html' %}
+{% block title %}퀴즈 안내{% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/screens/form.css' %}">
+<style>
+    .present-img {
+        width: 10rem;
+        height: 8rem;
+        vertical-align: middle;
+        border-style: none;
+        box-sizing: content-box;
+    }
+
+</style>
+<article class="start">
+    <div style="text-align : center;" class="posTitle">
+        <p>#상품_지급_방식</p>
+    </div>
+
+    <div class="posBorder">
+        <p style="text-align:center;" class="posContent">
+            별조각과 관련된 퀴즈를 통해 순위를 매겨 1등, 2등, 3등에게 <br>
+            기프티콘 상품을 지급할 예정입니다. 만약 공동 순위가 나올 경우, <br>
+            공동 순위자들끼리 추첨을 통해 상품 전달을 진행할 예정입니다.<br>
+            꼭 이름, 학번, 전화번호가 맞는지 한 번 더 확인해 주세요!</p>
+
+        <img id="present-img" src="{% static 'image/present.png' %}">
+
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="custom-field">
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button type="submit">퀴즈 풀기 Go!</button>
+        </form>
+
+        {% comment %} <form method="post">
+
+            <div class="custom-field">
+                <input type="text" name="name" class="input__name" maxlength="10" required id="id_name"
+                    placeholder="이름을 작성해주세요.">
+            </div>
+
+            <div class="custom-field">
+                <input type="text" name="student_id" class="input__student_id" maxlength="10" required
+                    id="id_student_id" placeholder="학번을 작성해 주세요. (ex.2171234)">
+            </div>
+
+            <div class="custom-field">
+                <input type="text" name="phone_num" class="input__phone_num" maxlength="13" required
+                    id="id_phone_num" placeholder="전화번호를 작성해 주세요. (ex.01000000000)">
+            </div>
+
+            <button type="submit">퀴즈 풀기 Go!</button>
+        </form> {% endcomment %}
+
+        <!-- 배경 작업 -->
+        <div class="constelacao"></div>
+
+        <div class="chuvaMeteoro"></div>
+        <!-- 배경 작업 끝 -->
+    </div>
+</article>
+
+
+{% comment %} <form method="post">
     {% csrf_token %}
     {% for field in form %}
         <div class="custom-field">
@@ -6,4 +75,6 @@
         </div>
     {% endfor %}
     <button type="submit">퀴즈 풀기 Go!</button>
-</form>
+</form> {% endcomment %}
+
+{% endblock %}
