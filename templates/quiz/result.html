@@ -1,3 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}결과{% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/screens/result.css' %}">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<article class="start">
+    <div style="text-align : center;" class="posTitle">
+        <p>#결과확인&nbsp;#두근두근</p>
+    </div>
+
+    <div class="posBorder">
+        <p style="text-align:center;" class="posScore">
+            <span>{{ name }}</span>님의 점수는 <span>{{ score }}점</span>입니다!<br>
+            {% if score >= 0 and score <= 40 %}
+                다음에는 더 잘 할 수 있겠죠?? ㅠㅠ
+            {% elif score >= 41 and score <= 80 %}
+                오호~ 천체에 좀 관심이 있나봐요!!
+            {% else %}
+                별조각도 감탄한 천체지식!!<br>
+                당신이 짱이랍니다~!
+            {% endif %}
+            
+        <br>
+        </p>
+
+        <p style="text-align:center;" class="posContent">
+        해당 결과 화면을 보여주시면 리플렛 스티커를 드립니다!<br>
+        참여해주셔서 감사합니다 ❤️<br>
+
+        </p>
+
+        <img id="banner" src="{% static 'image/boogie.png' %}">
+
+        <button class="check-btn" onclick="location.href='https://forms.gle/EJj97mX7zgQ995Ch7'">
+            별조각 지원하기
+        </button>
+
+        <!-- 배경 작업 -->
+        <div class="constelacao"></div>
+
+        <div class="chuvaMeteoro"></div>
+
+        <!-- 배경 작업 끝 -->
+    </div>
+</article>
+
+{% endblock %}
+
 결과
 
 {{ name }}님의 점수는 {{ score }}점 입니다!

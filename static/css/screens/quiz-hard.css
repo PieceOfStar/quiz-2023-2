@@ -21,7 +21,7 @@ display: flex;          /* Flex container로 설정 */
 flex-direction: column; /* 자식 요소들을 세로로 배치 */
 align-items: center;    /* 세로 중앙 정렬 */
 justify-content: center;/* 가로 중앙 정렬 */
-padding: 2.5rem;
+padding: 1rem;
 }
 
 .quiz__n{
@@ -129,7 +129,7 @@ button {
     margin:0 auto;
     border-radius: 1.875rem;
 background: #002446;
-width: 16.875rem;
+width: 14rem;
 height: 3.125rem;
 flex-shrink: 0;
 margin-top:0.75rem;
