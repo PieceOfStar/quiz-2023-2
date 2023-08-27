@@ -38,43 +38,11 @@
             <button type="submit">퀴즈 풀기 Go!</button>
         </form>
 
-        {% comment %} <form method="post">
-
-            <div class="custom-field">
-                <input type="text" name="name" class="input__name" maxlength="10" required id="id_name"
-                    placeholder="이름을 작성해주세요.">
-            </div>
-
-            <div class="custom-field">
-                <input type="text" name="student_id" class="input__student_id" maxlength="10" required
-                    id="id_student_id" placeholder="학번을 작성해 주세요. (ex.2171234)">
-            </div>
-
-            <div class="custom-field">
-                <input type="text" name="phone_num" class="input__phone_num" maxlength="13" required
-                    id="id_phone_num" placeholder="전화번호를 작성해 주세요. (ex.01000000000)">
-            </div>
-
-            <button type="submit">퀴즈 풀기 Go!</button>
-        </form> {% endcomment %}
-
         <!-- 배경 작업 -->
         <div class="constelacao"></div>
-
         <div class="chuvaMeteoro"></div>
         <!-- 배경 작업 끝 -->
     </div>
 </article>
-
-
-{% comment %} <form method="post">
-    {% csrf_token %}
-    {% for field in form %}
-        <div class="custom-field">
-            {{ field }}
-        </div>
-    {% endfor %}
-    <button type="submit">퀴즈 풀기 Go!</button>
-</form> {% endcomment %}
 
 {% endblock %}

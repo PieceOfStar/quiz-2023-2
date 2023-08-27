@@ -44,13 +44,12 @@ def easy_quiz_view(request, num, user_answer):
             if(user_answer == str(previous_item.answer)):
                 participant.score += item.plus_score # 참가자의 점수 올리기
                 participant.save() # 저장
-                print('7번 정답, 점수 올림')
                 
         context = { 
             'item' : item,
             'next_num' : next_num, 
         }
-        print(participant.score)
+
         return render(request, 'quiz/quiz-easy.html', context)
     
     else:
@@ -60,9 +59,7 @@ def easy_quiz_view(request, num, user_answer):
         if(user_answer == str(previous_item.answer)):
             participant.score += 5 # 참가자의 점수 올리기
             participant.save() # 저장
-            print('8번 정답, 점수 올림')
         
-        print(participant.score)
         return redirect('quiz:hard', num = 9)
 
 def normal_quiz_view(request, num, user_answer):
@@ -90,8 +87,6 @@ def normal_quiz_view(request, num, user_answer):
             'next_num' : next_num,
         }
         
-        print(participant.score)
-        
         return render(request, 'quiz/quiz-normal.html', context)
     
     else:
@@ -102,7 +97,6 @@ def normal_quiz_view(request, num, user_answer):
             participant.score += 10 # 참가자의 점수 올리기
             participant.save() # 저장
         
-        print(participant.score)
         return redirect('quiz:easy', num = 7, user_answer = 'start')
     
 def hard_quiz_view(request, num):
@@ -116,8 +110,6 @@ def hard_quiz_view(request, num):
         if user_answer is not None:
             
             if num == 9:
-                print('num 출력')
-                print(num)
                 answer_dict = { 'answer9_1': item.answer9_1, 'answer9_2': item.answer9_2, 'answer9_3': item.answer9_3, }
                 
                 # for문을 돌며 user_answer와 비교
@@ -126,32 +118,28 @@ def hard_quiz_view(request, num):
                         participant.score += item.plus_score # 참가자의 점수 올리기
                         participant.save() # 저장
                 
+                item = QuizHard.objects.get(quiz_num = 10) # 퀴즈 가져오기
                 # form 보여주기
                 context = {
                     'item' : item,
                     'num' : 10,
                 }
                 
-                print(participant.score)
                 return render(request, 'quiz/quiz-hard.html', context)
             
             else:
-                print('num 출력')
-                print(num)
+                item = QuizHard.objects.get(quiz_num = 10) # 퀴즈 가져오기
                 answer_dict = { 'answer10_1': item.answer10_1, 'answer10_2': item.answer10_2, 'answer10_3': item.answer10_3, }
                 # for문을 돌며 user_answer와 비교
                 for answer_key, correct_answer in answer_dict.items():
                     if user_answer == correct_answer: # 정답이면
                         participant.score += item.plus_score # 참가자의 점수 올리기
                         participant.save() # 저장
-
                 # form 보여주기
                 context = {
                     'item' : item,
                     'num' : num,
                 }
-                
-                print(participant.score)
                 # return render(request, 'quiz/result.html', context)
                 return redirect('quiz:result')
 
