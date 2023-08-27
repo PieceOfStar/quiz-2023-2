@@ -1,6 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}홈{% endblock %}
 {% load static %}
-홈
-<hr>
-<img class="header-img" src="{% static 'image/lion.jpeg' %}">
-<hr>
-<button onclick="location.href='{% url 'quiz:form' %}'">상품 지급 정보 확인</button>
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/screens/home.css' %}">
+
+<article class="start">
+    <div style="text-align : center;" class="posTitle">
+        <p>#별조각_소개</p>
+    </div>
+
+    <div class="posBorder">
+        <p style="text-align:center;" class="posContent">
+            안녕하세요, 한성대학교 천체 관측 동아리 별조각 입니다!<br>
+            <br>
+            별조각은 별을 사랑하는 사람들이 모인 동아리입니다. <br>
+            망원경으로 직접 달, 별자리 등을 정기적으로 관측합니다. <br>
+            슈퍼문, 일식, 월식 등과 같이 특별한 천체 행사가 있다면 <br>
+            더욱 생생하게 망원경으로 천체를 관측할 수 있습니다. <br>
+            천체에 관한 다양한 지식을 얻고 밤하늘을 함께 즐겨 봅시다!
+        </p>
+
+        <p class="StarBoogie">
+            별 보러 갈 부기?
+        </p>
+        <img id="banner" src="{% static 'image/boogie.png' %}">
+
+
+        <button class="check-btn" onclick="location.href='{% url 'quiz:form' %}'">
+            상품 지급 방식 확인
+        </button>
+
+        <!-- 배경 작업 -->
+        <div class="constelacao"></div>
+
+        <div class="chuvaMeteoro"></div>
+
+        <!-- 배경 작업 끝 -->
+    </div>
+</article>
+
+{% endblock %}

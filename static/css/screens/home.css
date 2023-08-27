@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+article {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 3.44rem;
+    color: #FFF;
+}
+
+.posTitle {
+    font-family: Pretendard;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.posBorder {
+    width: 20.9375rem;
+    height: 32.625rem;
+    flex-shrink: 0;
+    border-radius: 1.875rem;
+    background: rgba(167, 167, 167, 0.50);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.posContent {
+    margin-top: 1.81rem;
+    color: #FFF;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+.StarBoogie {
+    margin-top: 0.94rem;
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+button {
+    margin: 0 auto;
+    color: #002446;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 16.875rem;
+    height: 3.125rem;
+    flex-shrink: 0;
+    border-radius: 1.875rem;
+    background: #FFF;
+    margin-top: 0.94rem;
+}

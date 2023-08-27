@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+#logo {
+    width: 6.125rem;
+    height: 3.0625rem;
+    flex-shrink: 0;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fff;
+}
+
+#banner {
+    width: 15.0625rem;
+    height: 12.875rem;
+    flex-shrink: 0;
+}
+
+.container {
+    background: #002446;
+    padding: 0;
+}
