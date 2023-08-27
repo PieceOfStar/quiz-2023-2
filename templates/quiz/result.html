@@ -1,1 +1,13 @@
 결과
+
+{{ name }}님의 점수는 {{ score }}점 입니다!
+
+{% if score >= 0 and score <= 40 %}
+    <div>다음에는 더 잘 할 수 있겠죠?? ㅠㅠ</div>
+{% elif score >= 41 and score <= 80 %}
+    <div>오호~ 천체에 좀 관심이 있나봐요!!</div>
+{% else %}
+    <div>천재</div>
+{% endif %}
+
+<button onclick="location.href='https://forms.gle/EJj97mX7zgQ995Ch7'">별조각 지원하기</button>

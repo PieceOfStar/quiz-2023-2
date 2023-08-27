@@ -116,6 +116,8 @@ def hard_quiz_view(request, num):
         if user_answer is not None:
             
             if num == 9:
+                print('num 출력')
+                print(num)
                 answer_dict = { 'answer9_1': item.answer9_1, 'answer9_2': item.answer9_2, 'answer9_3': item.answer9_3, }
                 
                 # for문을 돌며 user_answer와 비교
@@ -134,6 +136,8 @@ def hard_quiz_view(request, num):
                 return render(request, 'quiz/quiz-hard.html', context)
             
             else:
+                print('num 출력')
+                print(num)
                 answer_dict = { 'answer10_1': item.answer10_1, 'answer10_2': item.answer10_2, 'answer10_3': item.answer10_3, }
                 # for문을 돌며 user_answer와 비교
                 for answer_key, correct_answer in answer_dict.items():
@@ -148,7 +152,8 @@ def hard_quiz_view(request, num):
                 }
                 
                 print(participant.score)
-                return render(request, 'quiz/result.html', context)
+                # return render(request, 'quiz/result.html', context)
+                return redirect('quiz:result')
 
     context = {
                     'item' : item,
@@ -157,13 +162,21 @@ def hard_quiz_view(request, num):
     return render(request, 'quiz/quiz-hard.html', context)
 
 def result_view(request):
-    return render(request, 'quiz/result.html')
+    participant = get_participant(request = request) # 쿠키를 이용해서 참가자 정보 받아오기
+    
+    name = participant.name
+    score = participant.score
+    
+    context = { 'name' : name,
+                'score' : score,
+                }
+    
+    return render(request, 'quiz/result.html', context)
 
 # 참가자 정보 가져오기
 def get_participant(request):
     
     participant_student_id = request.COOKIES.get('participant_student_id')
-
     try:
         return Participant.objects.get(student_id=participant_student_id)
         

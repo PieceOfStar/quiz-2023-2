@@ -15,7 +15,7 @@ hard
     <form method="post" action="{% url 'quiz:hard' num=10%}">
         {% csrf_token %}
         <input type="text" name="user_answer" placeholder="ex. 123">
-        <button type="submit">다음</button>
+        <button type="submit">결과 확인하기</button>
     </form>
 {% endif %}
 {% comment %} 넘길 때 result 넘기기 {% endcomment %}
