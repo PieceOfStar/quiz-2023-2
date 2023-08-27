@@ -74,6 +74,15 @@ display: flex;
     margin-bottom:1.5rem;
 }
 
+.quiz__c a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #002446; /* 원하는 글씨 색상으로 변경 */
+}
+
+.quiz__c a:hover {
+    color: #002446; /* 마우스 오버시 원하는 글씨 색상으로 변경 */
+}
+
 footer{
     min-height:4.81rem;
     margin-top: 6.75rem;
