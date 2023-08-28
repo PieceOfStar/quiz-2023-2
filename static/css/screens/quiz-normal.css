@@ -76,12 +76,13 @@ a .quiz__c.selected {
     margin-bottom:1.5rem;
 }
 
-a .quiz__c {
+a {
     text-decoration: none; /* 밑줄 제거 */
     color: #002446; /* 원하는 글씨 색상으로 변경 */
 }
 
-a .quiz__c:hover {
+a:hover {
+    text-decoration: none; /* 밑줄 제거 */
     color: #002446; /* 마우스 오버시 원하는 글씨 색상으로 변경 */
 }
 
