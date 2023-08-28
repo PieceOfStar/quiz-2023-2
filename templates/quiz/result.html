@@ -32,8 +32,14 @@
         참여해주셔서 감사합니다 ❤️<br>
 
         </p>
-
-        <img id="banner" src="{% static 'image/boogie.png' %}">
+        
+        {% if score >= 0 and score <= 40 %}
+            <img id="banner" src="{% static 'image/sad_boogie.png' %}">
+        {% elif score >= 41 and score <= 80 %}
+            <img id="banner" src="{% static 'image/happy_boogie.png' %}">
+        {% else %}
+            <img id="banner" src="{% static 'image/great_boogie.png' %}">
+        {% endif %}
 
         <button class="check-btn" onclick="location.href='https://forms.gle/EJj97mX7zgQ995Ch7'">
             별조각 지원하기
