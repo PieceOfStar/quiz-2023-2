@@ -19,9 +19,9 @@
 
 <body class="container">
     <div style="text-align :center;" onclick="window.location.reload();">
-        <img id="logo" src="{% static 'image/new_logo.png' %}">
-        <hr>
+        <img class="piece-of-star__logo" id="logo" src="{% static 'image/new_logo.png' %}">
     </div>
+    <hr>
 
     {% block content %}
 
@@ -30,7 +30,9 @@
     <footer>
         <hr>
         <br>
-        <p style="color:#fff;" class="develop">Developed by 강민서, 이나경</p>
+        <p style="color:#fff;" class="develop">Developed by<br><br>
+            Front-end 이나경  |  Back-end 강민서  |  Background 김태하<br>
+        </p>
         <!-- 배경 작업 -->
         <div class="floresta">
             <img src="https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgTree.png"

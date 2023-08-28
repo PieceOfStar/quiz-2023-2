@@ -15,7 +15,6 @@ hr {
 }
 
 #banner {
-    /* width: 15.0625rem; */
     height: 12.875rem;
     flex-shrink: 0;
 }
@@ -23,4 +22,8 @@ hr {
 .container {
     background: #002446;
     padding: 0;
+}
+
+.piece-of-star__logo {
+    margin-top: 20px;
 }
