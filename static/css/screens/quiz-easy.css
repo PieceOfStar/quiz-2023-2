@@ -66,7 +66,7 @@ display: flex;
     justify-content: center;
 }
 
-.quiz__c.selected {
+a .quiz__c.selected {
     background-color: #FFD747;
 }
 
@@ -79,7 +79,7 @@ a .quiz__c {
     color: #002446; /* 원하는 글씨 색상으로 변경 */
 }
 
-a .quiz__c :hover {
+a .quiz__c:hover {
     color: #002446; /* 마우스 오버시 원하는 글씨 색상으로 변경 */
 }
 
