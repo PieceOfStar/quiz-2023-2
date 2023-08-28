@@ -15,7 +15,7 @@ hr {
 }
 
 #banner {
-    width: 15.0625rem;
+    /* width: 15.0625rem; */
     height: 12.875rem;
     flex-shrink: 0;
 }
