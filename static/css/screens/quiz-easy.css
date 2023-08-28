@@ -74,12 +74,12 @@ display: flex;
     margin-bottom:1.5rem;
 }
 
-.quiz__c a {
+a .quiz__c {
     text-decoration: none; /* 밑줄 제거 */
     color: #002446; /* 원하는 글씨 색상으로 변경 */
 }
 
-.quiz__c a:hover {
+a .quiz__c :hover {
     color: #002446; /* 마우스 오버시 원하는 글씨 색상으로 변경 */
 }
 
