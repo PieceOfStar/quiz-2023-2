@@ -36,11 +36,27 @@
 
 <br>
 
-<h5>3. 시연 영상</h5>
+<h5>3. 시연 영상 및 캡쳐</h5>
 
 <br>
 
-- **벨로그 참고**
+- **[링크](https://github.com/PieceOfStar/quiz-2023-2/blob/main/%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81%20%EC%B5%9C%EC%A2%85.mov)**
+
+<div align="center">
+
+![스크린샷 2023-09-16 오전 1 51 10](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/c1acb68f-6c80-4942-b003-182dbdde156f)
+
+![스크린샷 2023-09-16 오전 1 51 19](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/d8f1c228-c37e-4c06-84cd-c7affa794fee)
+
+![스크린샷 2023-09-16 오전 1 51 26](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/ff0db6cf-b8c9-4d20-98e7-c7addddaa5da)
+
+![스크린샷 2023-09-16 오전 1 51 33](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/45eba44d-556e-4235-8984-e18b7bc00a27)
+
+![스크린샷 2023-09-16 오전 1 51 40](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/8edaed85-0da9-4b19-96fe-9c1f9e6520ef)
+
+![스크린샷 2023-09-16 오전 1 51 47](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/854047c4-ffb9-4901-9614-e496ab3f49df)
+
+</div>
 
 <br>
 
