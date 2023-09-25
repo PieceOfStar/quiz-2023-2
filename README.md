@@ -3,6 +3,10 @@
 
 <br>
 
+https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/3d7257ba-fda0-4fdc-8edf-c0e6fdfbf9d8
+
+<br>
+
 <h5>실제 서비스 링크</h5>
 
 - http://www.piece-of-star.site/
