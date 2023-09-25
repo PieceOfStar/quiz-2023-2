@@ -3,7 +3,11 @@
 
 <br>
 
+<div align="center">
+
 https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/9f112182-5055-4ca3-8d3c-7a8914f88554
+
+</div>
 
 <br>
 
