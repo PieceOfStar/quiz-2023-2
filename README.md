@@ -1,28 +1,17 @@
-# quiz-2023-2
+## quiz-2023-2
+
 **별조각 2023년 2학기 동아리 박람회 퀴즈**
 
 <br>
 
-<div align="center">
-
-https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/9f112182-5055-4ca3-8d3c-7a8914f88554
-
-</div>
-
-<br>
-
-<h5>실제 서비스 링크</h5>
+## 실제 서비스 링크
 
 - http://www.piece-of-star.site/
 - 서버 비용 부담으로 2023년 9월 15일까지만 열어두었습니다.
 
 <br>
 
----
-
-<br>
-
-<h5>1. 프로젝트 개요</h5>
+## 1. 프로젝트 개요
 
 &nbsp; 2023년 2학기, 동아리 박람회에서 별조각은 별과 천체와 관련된 콘텐츠를 준비하기로 했다. netlify와 같은 플랫폼을 활용하여 정적인 페이지를 구성하거나, 퀴즈 참여와 수기로 명단 작성을 수월하게 할 수 있겠지만, 이러한 방법들은 여러 가지 번거로움을 동반할 수 있다고 판단했다.
 <br>
@@ -32,7 +21,7 @@ https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/9f112182-5055-4ca3-8d
 
 <br>
 
-<h5>2. 서비스 기능</h5>
+## 2. 서비스 기능
 
 - 퀴즈 소개
 
@@ -44,31 +33,19 @@ https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/9f112182-5055-4ca3-8d
 
 <br>
 
-<h5>3. 시연 영상 및 캡쳐</h5>
+## 3. 시연 영상
 
 <br>
 
-- **[링크](https://github.com/PieceOfStar/quiz-2023-2/blob/main/%EC%8B%9C%EC%97%B0%EC%98%81%EC%83%81%20%EC%B5%9C%EC%A2%85.mov)**
-
 <div align="center">
 
-![스크린샷 2023-09-16 오전 1 51 10](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/c1acb68f-6c80-4942-b003-182dbdde156f)
-
-![스크린샷 2023-09-16 오전 1 51 19](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/d8f1c228-c37e-4c06-84cd-c7affa794fee)
-
-![스크린샷 2023-09-16 오전 1 51 26](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/ff0db6cf-b8c9-4d20-98e7-c7addddaa5da)
-
-![스크린샷 2023-09-16 오전 1 51 33](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/45eba44d-556e-4235-8984-e18b7bc00a27)
-
-![스크린샷 2023-09-16 오전 1 51 40](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/8edaed85-0da9-4b19-96fe-9c1f9e6520ef)
-
-![스크린샷 2023-09-16 오전 1 51 47](https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/854047c4-ffb9-4901-9614-e496ab3f49df)
+https://github.com/PieceOfStar/quiz-2023-2/assets/98332877/9f112182-5055-4ca3-8d3c-7a8914f88554
 
 </div>
 
 <br>
 
-<h5>4. 기타 정보</h5>
+## 4. 기타 정보
 
 <br>
 
